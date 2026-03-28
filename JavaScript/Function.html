@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+        const hello=()=>{
+            console.log("Hey how are you")
+            return "hi"
+        }
+
+        let a=12;
+        let b=10;
+        let c=15;
+        let v=hello()
+        console.log(v)
+        function myFunctions(a,b){
+            return 1 +(a+b)/2
+            // return Math.round (1 +(a+b)/2)
+
+        }
+
+        console.log("Average of a and b is "+ myFunctions(a,b))
+        console.log("Average of b and c is "+ myFunctions(b,c))
+        console.log("Average of c and a is "+ myFunctions(c,a))
+    
+        function addnumber(num1,num2){
+            return num1+num2
+        }
+        const result=addnumber(1,2)
+        console.log("Result: ",result)
+
+        function loginUserMessage(username){
+            return `${username} just login`
+        }
+        console.log(loginUserMessage(""))
+        console.log(loginUserMessage())
+
+        const StoreDate = loginUserMessage("Ishita")
+        console.log(StoreDate)
+
+
+        const cardOrder={
+            productname:"facewash",
+            price: 200
+        }
+        function handleObject(anyObject){
+            console.log(`product is ${anyObject.productname}and the price of product are ${anyObject.price}`)
+        }
+        handleObject(cardOrder)
+        
+        function returnarray(getArray){
+            return getArray[1]
+        }
+        console.log(returnarray([100,200,300,400]))
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

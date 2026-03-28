@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-box {
+            background: #fff;
+            padding: 25px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Registration Form</h2>
+
+    <form id="myForm">
+        <label>Name</label>
+        <input type="text" id="name">
+        <div id="nameError" class="error"></div>
+
+        <label>Email</label>
+        <input type="text" id="email">
+        <div id="emailError" class="error"></div>
+
+        <label>Password</label>
+        <input type="password" id="password">
+        <div id="passError" class="error"></div>
+
+        <label>Mobile</label>
+        <input type="text" id="mobile">
+        <div id="mobileError" class="error"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    let form = document.getElementById("myForm");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); // stop page refresh
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let mobile = document.getElementById("mobile").value;
+
+        let valid = true;
+
+        // Name validation
+        if (name === "") {
+            document.getElementById("nameError").innerText = "Name is required";
+            valid = false;
+        } else {
+            document.getElementById("nameError").innerText = "";
+        }
+
+        // Email validation
+        let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!email.match(emailPattern)) {
+            document.getElementById("emailError").innerText = "Invalid email";
+            valid = false;
+        } else {
+            document.getElementById("emailError").innerText = "";
+        }
+
+        // Password validation
+        if (password.length < 6) {
+            document.getElementById("passError").innerText = "Minimum 6 characters";
+            valid = false;
+        } else {
+            document.getElementById("passError").innerText = "";
+        }
+
+        // Mobile validation
+        let mobilePattern = /^[0-9]{10}$/;
+        if (!mobile.match(mobilePattern)) {
+            document.getElementById("mobileError").innerText = "Enter 10 digit number";
+            valid = false;
+        } else {
+            document.getElementById("mobileError").innerText = "";
+        }
+
+        if (valid) {
+            alert("Form Submitted Successfully!");
+            form.reset();
+        }
+    });
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Mini Project - To Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 80%;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #eee;
+            padding: 8px;
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .done {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button id="addBtn">Add</button>
+
+    <ul id="taskList"></ul>
+</div>
+
+<script>
+    let input = document.getElementById("taskInput");
+    let button = document.getElementById("addBtn");
+    let list = document.getElementById("taskList");
+
+    button.addEventListener("click", function () {
+        if (input.value === "") {
+            alert("Please enter a task");
+            return;
+        }
+
+        // Create list item
+        let li = document.createElement("li");
+        li.innerText = input.value;
+
+        // Mark done on click
+        li.addEventListener("click", function () {
+            li.classList.toggle("done");
+        });
+
+        // Delete button
+        let delBtn = document.createElement("button");
+        delBtn.innerText = "❌";
+
+        delBtn.addEventListener("click", function () {
+            li.remove();
+        });
+
+        li.appendChild(delBtn);
+        list.appendChild(li);
+
+        input.value = "";
+    });
+</script>
+
+</body>
+</html>

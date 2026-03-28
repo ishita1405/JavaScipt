@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCOPE</title>
+</head>
+<body>
+    <script>
+        var i=200
+        if(true){
+            let a = 10
+            const b = 20
+            var c = 30
+        console.log(a)
+        console.log(b)
+        console.log(c)
+
+
+        }
+        // console.log(a)
+        // console.log(b)
+        console.log(c)//used var to be accessible in the log
+        console.log(i)
+
+        function user(){
+           const username="Ishita"
+
+            function seconduser(){
+                const website="Youtube"
+                console.log(username)
+            }
+            console.log(user.username)
+            seconduser()
+        }
+        user()
+
+    </script>
+    
+</body>
+</html>

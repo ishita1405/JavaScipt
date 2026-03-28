@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Clone</title>
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: #121212;
+  color: white;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: black;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  color: #1db954;
+}
+
+.sidebar ul li {
+  list-style: none;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.song-list {
+  margin-top: 20px;
+}
+
+.song {
+  padding: 10px;
+  background: #181818;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Player */
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #181818;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#progress {
+  width: 200px;
+}
+
+</style>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Spotify</h2>
+    <ul>
+      <li>Home</li>
+      <li>Search</li>
+      <li>Your Library</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Playlist</h1>
+
+    <div class="song-list">
+      <div class="song" onclick="playSong(0)">🎵 Song One</div>
+      <div class="song" onclick="playSong(1)">🎵 Song Two</div>
+    </div>
+  </div>
+
+  <!-- Player -->
+  <div class="player">
+    <span id="songName">Song Name</span>
+
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button onclick="togglePlay()">▶</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+
+    <input type="range" id="progress" value="0">
+  </div>
+
+  <audio id="audio"></audio>
+
+  <script>
+    let songs = [
+  { name: "Song One", src: "songs/song1.mp3" },
+  { name: "Song Two", src: "songs/song2.mp3" }
+];
+
+let audio = document.getElementById("audio");
+let songName = document.getElementById("songName");
+let progress = document.getElementById("progress");
+
+let currentSong = 0;
+let isPlaying = false;
+
+function playSong(index) {
+  currentSong = index;
+  audio.src = songs[index].src;
+  songName.innerText = songs[index].name;
+  audio.play();
+  isPlaying = true;
+}
+
+function togglePlay() {
+  if (isPlaying) {
+    audio.pause();
+    isPlaying = false;
+  } else {
+    audio.play();
+    isPlaying = true;
+  }
+}
+
+function nextSong() {
+  currentSong = (currentSong + 1) % songs.length;
+  playSong(currentSong);
+}
+
+function prevSong() {
+  currentSong = (currentSong - 1 + songs.length) % songs.length;
+  playSong(currentSong);
+}
+
+audio.addEventListener("timeupdate", () => {
+  progress.value = (audio.currentTime / audio.duration) * 100;
+});
+
+progress.addEventListener("input", () => {
+  audio.currentTime = (progress.value / 100) * audio.duration;
+});
+
+  </script>
+</body>
+</html>

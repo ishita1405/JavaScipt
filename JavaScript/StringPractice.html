@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Practice</title>
+</head>
+<body>
+    <script>
+        //1
+        console.log("har\"".length) //\" thats 1 string
+        //2
+        let sent = "Hi im here"
+        console.log(sent.startsWith("Hi"))
+        console.log(sent.endsWith("here"))
+
+        //3
+        console.log(sent.toLowerCase())
+        console.log(sent.toUpperCase())
+
+        //4
+        let str="please give rs 1000"
+        let amt = Number.parseInt(str.slice(15))
+        console.log(str)
+        console.log(amt)
+        console.log(typeof(amt))
+
+        //5
+        let string= "Neha"
+        string[3]="a"   //string is an immutable
+        console.log(string)
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

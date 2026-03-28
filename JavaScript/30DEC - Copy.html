@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31 DEC</title>
+</head>
+<body>
+    <!-- var is an redeclare  -->
+    <script>
+        console.log("this is the my 1st program of js");
+        var a=12;
+        console.log(a);
+        a="ishita"
+        console.log(a);
+
+        var b=45;
+        console.log(b);
+
+        {
+            let b= 12;
+             console.log(b);
+        }
+        console.log(b);
+
+        let c=15;
+        console.log(c);
+
+        // let c=40; we cannt re declare 
+        c=40
+        console.log(c);
+
+        const d= 1;
+        console.log(d);
+        // d=4;We can not re declare in variable 
+        console.log(d);
+
+    // primitive data type 
+    // nn bb ss u
+    // 1. number 
+    // 2. bollean
+    // 3. null
+    // 4. undefine
+    // 5. string 
+    // 6. BigInt
+    // 7.Symbol
+
+    let s=null;
+    let t=345;
+    let q=true;
+    let r= BigInt("564")*BigInt("3");
+    let e= "Ishita";
+    let h =Symbol("Im a nices symbol");
+    let g;
+    console.log(s,t,q,r,e,h);
+    console.log(typeof s);
+    console.log(typeof g);
+
+    // Non-Primitive data type 
+
+    const items ={
+        "Harry": true,
+        "shubh": false,
+        "Lovish":34,
+        "Rohan" :undefined
+    }
+    console.log(items["Harry"])
+    console.log(items["Rohan"])
+    console.log(items["Lovish"])
+    console.log(items["shubh"])
+
+
+//Question set 
+// variable type string and try to add a number
+    let i="ishita";
+    let k= 4;
+    console.log(i+k);
+
+//type of the q.1 
+    console.log(typeof i);
+    console.log(typeof k);
+    console.log(typeof (i+k));
+
+// a const object in js can you change it 
+
+const student={
+    name: "Ishita",
+    Section : "a",
+    Mark : 87,
+    Isprincipal : true
+}
+//    student =91 we cannot change the const variable to any type of data  
+
+// to add a  new key to the const object in problem 3
+    student['friend'] ="shubham"
+    student['man'] ="woman"
+
+    console.log(student)
+    
+//write a wordmeaning dictionary of 5 words\
+
+const dict ={
+    appreciate: "recognize the full worth of.",
+    ataraxia: "a state of freedom from emotional",
+    yakka: "work,esepecially hard work"
+
+}
+console.log(dict.yakka);
+console.log(dict['ataraxia']);
+
+
+
+
+
+
+
+
+
+        
+
+        
+    </script>
+     
+    
+</body>
+</html>

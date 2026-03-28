@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type Conversation </title>
+</head>
+<body>
+<script>
+    //null, undefined, number string 
+    let score=true;
+    console.log(typeof score)
+    console.log(typeof(score))
+
+    let valueIntNumber=Number(score)
+    console.log(typeof valueIntNumber);
+    console.log(valueIntNumber)
+    //"33" =>33
+    //"33abc"=> NaN
+    // true=>1; false =>0
+//2
+    let score1=12;
+    console.log(typeof score1)
+    console.log(typeof(score1))
+
+    let valueIntNumber1=String(score1)
+    console.log(typeof valueIntNumber1);
+    console.log(valueIntNumber1)
+
+    //3
+     let islogged=""
+     console.log(typeof(islogged))
+     let valueIntNumber3=Boolean(islogged)
+     console.log(typeof valueIntNumber3)
+     console.log(valueIntNumber3)
+
+//1=> true; 0=>false
+//""=>false
+//"Ishita"=>true
+
+
+//*******************OPERATIONS ****************************
+
+    let value=12;
+    let negvalue=-value;
+    console.log(negvalue)
+
+    let str1="hello"
+    let str2=" Ishita"
+    let str3 = str1 + str2;
+    console.log(str3)
+    console.log(1+"2")
+    console.log(1+"2")
+    console.log("1"+2 + 2);
+    console.log(1+2 + "2");
+    console.log(+true)
+    console.log("")
+
+    let gameCounter=100;
+    gameCounter++;
+    console.log(gameCounter)
+
+    //if you compare datatype to compare always same datatype then the operations are perform otherwise operations are not perform
+    console.log("2">1);
+     console.log("02">1)
+     
+    //avoid
+    console.log(null > 0)
+    console.log(null == 0)
+    console.log(null >= 0)
+    console.log(null === 0)
+
+    //avoid
+    
+    console.log(undefined >= 0)
+    console.log(undefined <= 0)
+    console.log(undefined === 0)
+
+    console.log("2"===1)
+
+
+
+
+</script>    
+</body>
+</html>

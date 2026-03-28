@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        // String is an collection of data
+        //string is an double Quotes
+        let a ="Ishita";
+        console.log(a)
+        console.log(a[3])
+        console.log(a.length)
+        
+        //string is an single Quotes
+        let b='e'
+        console.log(b)
+
+
+        //String templates letral
+        //template letral is used backticks of quotes to define a string 
+
+        let frnd1='roshan'
+        let frnd2='nayan'
+        let sent=`${frnd1} is a "best friend" of ${frnd2}`
+        console.log(sent)
+
+        //String interpolation
+        //we can insert variable directly in templates literal. This is called string interpolations
+
+        sent=`${frnd1} is a "best friend" of ${frnd2}`
+
+        //Escape Sequence Character 
+
+        // let fruit='Bana\nna'
+        // console.log(fruit)
+
+        let fruit="Bana\"na"
+        console.log(fruit)
+
+        // Other escape Sequence 
+
+        // \n -> newline 
+        // \t -> tab
+        // \r -> carriage return
+
+        //string method 
+        let name = "ishita"
+        console.log(name)
+        console.log(name.toUpperCase()) //1
+        console.log(name.toLowerCase()) //2
+        console.log(name.charAt(2))
+        console.log(name.indexOf('t'))
+
+        console.log(name.slice(4,5)) //3 
+        console.log(name.slice(2))
+
+        console.log(name.replace('ish','Neh'))//4
+
+        let friend="Naman"
+        console.log(name.concat(" is a friend of", friend,"Ok"))//5
+
+        let friend2 = "             Meena               "//6
+        console.log(friend2)
+
+        console.log(friend2.trim())//7
+
+        let fr="Shivika"
+        for(let i=0; i <= fr.length; i++){
+            console.log(fr[i],i)
+            console.log(fr.slice(3,5))
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

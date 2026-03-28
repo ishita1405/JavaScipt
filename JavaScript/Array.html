@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+
+        let array = [12,13,5,43,1]
+        console.log(array)
+
+        let array1 = [12,13,5,43,1,true,"Not give"]
+        console.log(array1)
+        console.log(array1[0])       
+        console.log(array1[1])
+        console.log(array1[2])
+        console.log(array1[3])
+        console.log(array1[4])
+        console.log(array1[5])
+        console.log(array1[6])
+        console.log("Total array is",array1.length)
+    
+        //value change
+        array1[7]=67;//add
+        array1[1]=23;//CHANGE
+        console.log(array1[7])
+        console.log("Total array is",array1)
+        console.log("Total array is",array1.length)
+
+        //arrays are muttable and string is muttable 
+
+        console.log(typeof(array1))
+
+        //quiz 
+        for(let i=0 ;i<=array1.length;i++){
+            console.log(array1,i)
+        }
+
+
+
+        //ARRAY METHODS
+
+        let num=[1,2,3,4,5]
+        let b=num.toString()
+        console.log(b)
+        console.log(typeof(b))
+
+        let c = num.join(" and ")   //Join method
+        console.log(c,typeof c)
+
+        num.pop()   //pop return pop element remove the last element
+        console.log(num)
+
+        num.push(10)   //push add the element in the last 
+        console.log(num)
+
+
+        let r = num.shift()
+        console.log(r,num) // 
+
+            //type of coercion
+        let n1="21";
+        let n2 = 34;
+        let boolean = true;
+        let nullvalue=null;
+        console.log(boolean+n1)
+        console.log(n1+n2)
+        console.log(nullvalue+boolean)
+    
+    //concat ,delete
+
+    let arraydel=[1,2,3,4,5,6,7]
+    let arraycon=[11,12,13,13,14,13,131,13]
+    let arraymore=[21,22,23,24,25,26,27,28]
+
+    // delete arraydel[0]
+    // console.log(arraydel.length)
+    // console.log(arraydel)  
+    
+    let newarray=arraydel.concat(arraycon)
+    console.log(newarray)
+    
+    let concateArray=arraydel.concat(arraycon,arraymore)
+    console.log(concateArray)
+    
+    
+    //sort
+    let numSort=[111,344,232,1,213,45,4532,23]
+    let Sort1=numSort.sort()
+    console.log(Sort1)
+
+    //sort functions are have optional compare functions
+    let compare = (a,b)=>{
+        return b-a
+    }
+    //sort
+    let number=[12,45,2,112,4]
+    number.sort(compare)
+    console.log(number)
+    //reverse
+    number.reverse()
+    console.log(number)
+
+    //splice
+
+    let num1=[23,12,34,43,2,134,3]
+    num1.splice(2,3,1234,1235,1236,1237)
+    console.log(num1)
+
+    let spliceArray=num1.splice(2,3,1234,1235,1236,1237)
+    console.log(spliceArray)
+    console.log(typeof(spliceArray))
+
+    //slice
+    let countSp =[12,34,13,14,12,15]
+    let newCountSp = countSp.slice(2)
+    console.log(newCountSp)
+
+    let num2=[12,13,14,15]
+    // for(let i=0;i<num2.length;i++){
+    //     console.log([i])
+    // }
+
+
+    //for each
+    num2.forEach((element)=>{
+        console.log(element*element)
+    })
+
+    //Array from
+    let name="Ishita"
+    let arrname=Array.from(name)
+    console.log(arrname)
+
+    //for...of
+    for(let i of num2){
+        console.log(i)
+    }
+    //for..in
+    for(let item in num2){
+       console.log(item)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+  <script>
+    //   let emp= {
+    //     name:"Ishita",
+    //     Age:20,
+    //     clg:"sbjit",
+    //     mobile:"1235674324"
+    // };
+    // console.log("Initial Object:", emp);
+    // console.log("Name:",emp.name)
+    // console.log("Name:",emp["Age"])
+
+    // emp.Age=21;
+    // console.log("Upadates Age:",emp.Age)
+    // console.log(emp)
+    // delete emp[Age];
+    // console.log(emp)
+//singleton constructor se banta hai literal se nhi banta
+
+
+//object literal
+// object.create workas the object constructor
+
+
+const mySym= Symbol("key1")
+const user={
+  name:"Ishita",
+  "full name":"Ishita nimje",
+  age:18,
+  [mySym]:"mykey1",//refer the symbol to be used symbol
+  email:"ishita@gmail.com",
+  isLogged:false, 
+  lastLoginDay:["Monday","saturday"]
+
+}
+console.log(user["age"])
+// console.log(user.full name) is not work
+
+console.log(user["full name"])
+console.log(user[mySym])
+console.log(typeof mySym)
+
+user.email="chatgpt@gmail.com"
+//Object.freeze(user) //freeze is used for the log the varible to be dont change value
+console.log(user)
+
+user.email="chatgpt@microgmail.com"
+console.log(user)
+
+user.greeting=function(){
+  console.log("Hello js users")
+}
+
+
+user.greetingTwo=function(){
+  console.log(`Hello js users,${this.name}`)
+}
+console.log(user.greeting());
+console.log(user.greetingTwo());
+
+// const tinderUser=new Object()
+const tinderUser={}
+tinderUser.id="1234",
+tinderUser.name="ishu",
+tinderUser.age=21,
+tinderUser.isLogged =false
+console.log(tinderUser);
+
+const regularUser={
+  email:"ishi@gmail.com",
+  fullName:{
+    firstName:"Ishita",
+    lastname:"Nimje"
+  }
+}
+console.log(regularUser.fullName);
+
+const obj1={1:"a",2:"b"}
+const obj2={3:"c",4:"d"}
+const obj4={5:"c",6:"d"}
+const obj5={7:"c",8:"d"}
+const obj6={9:"c",10:"d"}
+
+//const obj3= {obj1, obj2}
+// const obj3 = Object.assign({},obj1,obj2.obj4,obj5,obj6)
+
+const obj3 ={...obj1, ...obj2}
+console.log(obj3)
+
+console.log(tinderUser)
+console.log(Object.keys(tinderUser));
+console.log(Object.values(tinderUser));
+console.log(Object.entries(tinderUser));
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+const Course = {
+  coursename:"js in hindi",
+  price:"999",
+  courseInstructor:"Ishita"
+}
+console.log(Course["coursename"])
+console.log(Course.courseInstructor);
+
+//course.courseInstructor
+const {courseInstructor} = Course;
+console.log(courseInstructor);
+
+
+
+
+
+  </script>
+    
+</body>
+</html>

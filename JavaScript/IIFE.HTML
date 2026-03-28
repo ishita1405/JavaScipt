@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMMEDIATELY Invlove Function Expression</title>
+</head>
+<body>
+    <script>
+        (function chai (){
+            //named IIFE
+            console.log(`DB Connected`)
+        })();
+
+        ( (name)=>{
+            console.log(`DB2 is connected ${name}`);
+        })('ishi');
+
+        // chai()
+        
+        (function program(){
+            console.log(`my program`);      
+        })();
+
+        ((name1)=>{
+            console.log(`Its programming ${name1}`);
+        })('Ishita');
+
+    </script>
+</body>
+</html>

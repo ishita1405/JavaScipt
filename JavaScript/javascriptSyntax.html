@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Syntax</title>
+</head>
+<body>
+<h2> Javascript Syntax</h2>
+<p>JavaScript is the programming language of HTML and the Web.</p>
+<button type="button" onclick="document.getElementById('demo').style.fontSize = '35px'">Click Me!</button>
+
+<p id="demo"></p>
+<script>
+    let x=8;
+    const y=10;
+    let z= x+y;
+    let a=x*y;
+    let b=x/y;
+    let c=x%y;
+    let d = x-y;
+
+    let carName = "Volvo";
+    let carName1 = 'TOYOTA'; // Single quotes are allowed
+    let carName2 = "It's alright"; // Use double quotes when there are single quotes    
+    //document.getElementById("demo").innerHTML =  "The value of z is " + z;
+    //document.getElementById("demo").innerHTML =  "The value of A is " + a;
+    //document.getElementById("demo").innerHTML =  "The value of B is " + b;
+    //document.getElementById("demo").innerHTML =  "The value of C is " + c;
+    //document.getElementById("demo").innerHTML =  "The value of D is " + d;
+    document.getElementById("demo").innerHTML =  "The car name is " + carName;
+    document.getElementById("demo").innerHTML =  "The car name is " + carName1;
+
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+</script>
+</body>
+</html>
