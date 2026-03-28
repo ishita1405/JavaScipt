@@ -1,0 +1,14 @@
+{
+  "name": "packagejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "basicJS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ishita",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

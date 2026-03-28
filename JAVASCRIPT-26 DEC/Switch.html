@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let day=3;
+
+        switch(day){
+            case 1: 
+            console.log("Monday");
+            break;
+             case 2: 
+            console.log("Tuesday");
+            break;
+             case 3: 
+            console.log("Wednesday");
+            break;
+             case 4: 
+            console.log("Thursday");
+            break;
+             case 5: 
+            console.log("Friday");
+            break;
+             case 6: 
+            console.log("Saturday");
+            break;
+             case 7: 
+            console.log("Sunday");
+            break;
+            default:
+            console.log("Invalid day");
+            break;   
+        }
+        //break -loop ko rok deta hai 
+        // continue : Current iteration ko skip karke next iteration pe le jata hai , loop ko nhi rokta hai 
+
+        for(let i=1;i<=10; i++){
+            if(i==5){
+                break
+            }
+                console.log(i);
+                
+            }
+            //wap using switch case find month name taking month number as input 
+
+
+            // == vs ===
+            //== check for equality after type coercion(converaion of types)
+            //== check for equality without type coercion(strict equality)
+
+            console.log(5=="5")//true (type coercion happens)
+            console.log(5==="5") // false (no type coercion)
+            console.log(0==false);  //true (type coercion)
+             console.log(0===false); //false(no type coersion happens)
+
+             //wap using switch case find month name taking month number as input 
+
+             let Month= Number(prompt("Enter the month number : "));
+
+            //  <input type =" number" id= "MonthName">
+             
+             switch (Month) {
+                case 1:
+                    console.log("January");
+                    break;
+                case 2:
+                    console.log("Feb");
+                    break;
+                case 3:
+                    console.log("March");
+                    break;
+                case 4:
+                    console.log("April");
+                    break;
+                case 5:
+                    console.log("May");
+                    break;
+                case 6:
+                    console.log("June");
+                    break;
+                case 7:
+                    console.log("July");
+                    break;
+                case 8:
+                    console.log("August");
+                    break;
+                case 9:
+                    console.log("September");
+                    break;
+                case 10:
+                    console.log("October");
+                    break;
+                case 11:
+                    console.log("November");
+                    break;
+                case 12:
+                    console.log("Deceber");
+                    break;
+                default:
+                    console.log("Invalid User");
+                    break;
+             }
+
+
+
+
+    </script>
+    
+</body>
+</html>
